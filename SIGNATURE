@@ -1,0 +1,50 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.37.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It would check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 12549569098cbb0efa8a4aa91f5f38068791fe42 COPYING
+SHA1 98ee22b869ac2bf1bbdab463d96fa3f1dd78bfc8 Changes
+SHA1 693b0502565892bf04b7163b6ebab7409411f469 INSTALL
+SHA1 7d040a6952fc17d3f696cfeef157c95d061e1a27 MANIFEST
+SHA1 ccb844c0940cc5f78fbc82ce9f26353c08c7f234 MANIFEST.SKIP
+SHA1 fe26a1bc4bf433942ff0abd207dbd02d78812040 META.yml
+SHA1 708b0531898f3a4639ee5aa8b99c99d8e19c3d6d Makefile.PL
+SHA1 66682d30e0f10900281accfcc02257b10320f580 README
+SHA1 8a27fc7c92d82f487132ddb818c1206cd1c189c1 inc/ExtUtils/AutoInstall.pm
+SHA1 24583a0d9fd9644c0ce10961039630658c04ddba inc/Module/Install.pm
+SHA1 b431feb7056a1bc5fc36fefb7b71d7e3fc970d0b inc/Module/Install/AutoInstall.pm
+SHA1 afe7ca05acf9028246e70aa6cdbc4f238b12acdd inc/Module/Install/Base.pm
+SHA1 06687525d97773cce10773d77f1762b20ee5e0df inc/Module/Install/Can.pm
+SHA1 c03e641fcc136de2fbdd62ce4e82e2dfa8410962 inc/Module/Install/Fetch.pm
+SHA1 2c8d8bacd52139c3390cd9ea5b8ce3197ab27b90 inc/Module/Install/Include.pm
+SHA1 73e47812c7c610cbca31423dd2ec830807996702 inc/Module/Install/Makefile.pm
+SHA1 1c9f1aa777868095d07681a06a84583aff35caee inc/Module/Install/Metadata.pm
+SHA1 b8ed037b7c924794219a60554d5fc71a90648719 inc/Module/Install/Win32.pm
+SHA1 24088d6f6f373f3ecf9e3a4b93295abc448e210c lib/Mail/VersionTracker.pm
+SHA1 9855368744e7cd128733a4306a8a8d36340ecaf9 lib/Mail/VersionTracker.pod
+SHA1 dc92970fa688540d185398d953e0ad5f3f9b5869 lib/Mail/VersionTracker/Entry.pm
+SHA1 a3a8211c09ec50ba9bc5e4e8b3242a62e4d133c8 lib/Mail/VersionTracker/Utils.pm
+SHA1 875dec3f8dcdfc69f69eaa1a00834f39f4f244df t/0-signature.t
+SHA1 9b61defecbea379d49df026556807264c933ea28 t/entries.t
+SHA1 136259198ed0c344b5d53bd8e29fdafa6c4ecfdf t/macosx
+SHA1 6f112f437dc89eb31bafae41dc7762477cdcabe3 t/newsletters.t
+SHA1 1099fe488859d2b31b856a56317ab2a6c05d4394 t/palmos
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.1 (GNU/Linux)
+
+iD8DBQE/zUYvqyhcxth1eKwRAo/nAJ0V4pvih91RAMDkBS6k/qV+BPGHsACfRMBV
+JNnxeb1tinV6vdNusV3KI+Q=
+=SVXl
+-----END PGP SIGNATURE-----

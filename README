@@ -1,0 +1,119 @@
+NAME
+    Mail::VersionTracker - Parses newsletters from versiontracker.com
+
+SYNOPSIS
+     use Mail::VersionTracker;
+
+     my $newsletter = Mail::VersionTracker->new(\*STDIN);
+
+     print "Date: ", $newsletter->date(), "\n";
+     print "Total entries: ", $newsletter->total(), "\n\n";
+
+     for my $entry ($newsletter->entries()) {
+        print "Name and version: ", $entry->name_and_version(), "\n";
+        print "Name: ", $entry->name(), "\n";
+        print "Version: ", $entry->version(), "\n";
+        print "Category: ", $entry->category(), "\n";
+        print "Date: ", $entry->date(), "\n";
+        print "Description: ", $entry->description(), "\n";
+        print "URL: ", $entry->url(), "\n\n";
+     }
+
+     # or
+
+     for my $entry ($newsletter->entries()) {
+         for my $key ($entry->entry_keys()) {
+             my $key_stringified = $entry->stringify($key);
+             print "$key_stringified: ", $entry->$key(), "\n";
+         }
+         print "\n";
+     }
+
+DESCRIPTION
+    Mail::VersionTracker is a subclass of Mail::Internet.
+
+    This package provides parsing of the daily e-mail newsletters which are
+    sent out from http://versiontracker.com/ to any individual who requests
+    them.
+
+CLASS METHODS
+    * new
+        This is the constructor. Pass it something that Mail::Internet will
+        like such as a file descriptor (reference to a GLOB) or a reference
+        to an array and you will get back a newsletter object.
+
+NEWSLETTER METHODS
+    * date
+        Returns the date of this newsletter.
+
+    * total
+        Returns the total number entries in this newsletter.
+
+    * entries
+        This object method will return an array or an array reference
+        (depending on context) of entry objects for all of the entries in
+        the newsletter.
+
+    * details
+        Returns the text representation of all of the newsletter's entries.
+
+    * full
+        Return the text representation of the entire newsletter.
+
+ENTRY METHODS
+    * entry_keys
+        Returns all of the methods, by name, that can be called against an
+        entry.
+
+    * stringify
+        Stringifies the name of an entry key, i.e., ucfirst's it, and
+        converts all underscores to spaces.
+
+    * name_and_version
+        Returns the name and version of this entry. I.e., Zoe 0.5.4
+
+    * name
+        Returns the name of this entry. I.e., Zoe
+
+    * version
+        Returns the version of this entry. I.e., 0.5.4
+
+    * category
+        Returns the category of this entry. I.e., Freeware
+
+    * date
+        Returns the date of this entry. I.e., 11/22/2003
+
+    * description
+        Returns the description of this entry. I.e., Browser based email
+        client
+
+    * url
+        Returns the URL of this entry. I.e.,
+        http://www.versiontracker.com/dyn/moreinfo/mac/14677
+
+BUGS
+      Please report any bugs to (patches welcome):
+      http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Mail-VersionTracker
+
+COPYRIGHT
+      Copyright (c) 2003 Adam J. Foxson. All rights reserved.
+
+LICENSE
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 2 of the License, or (at your
+    option) any later version.
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+SEE ALSO
+    * perl
+    * Mail::Internet
+
+AUTHOR
+    Adam J. Foxson <afoxson@pobox.com>.
+
